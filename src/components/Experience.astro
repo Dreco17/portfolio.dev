@@ -1,0 +1,46 @@
+---
+import ExperienceItem from "./ExperienceItem.astro"
+const EXPERIENCIE = [
+  {
+    date: "Febrero 2021 - Junio 2024",
+    title: "Coordinador de Marketing",
+    company: "PROMED - AMBULANCIAS",
+    description:
+      "Encargado del desarrollo e implementación de estrategias de marketing digital, enfocado en resaltar la calidad, eficiencia y fiabilidad de los servicios, contribuyendo al crecimiento de la empresa y fortaleciendo su presencia en el mercado. Supervisión y coordinación de las operaciones diarias, identificando oportunidades de mejora y optimización de procesos.",
+    link: "https://www.facebook.com/ambulanciascochabambapromed",
+  },
+  {
+    date: "Enero 2020 - Octubre 2021",
+    title: "Administrador / Encargado de Distribución Canal Horizontal",
+    company: "DIVECO",
+    description:
+      "Encargado de la administración general de la empresa y del canal horizontal, participando en la planificación y ejecución de estrategias comerciales orientado a los objetivos, liderando la capacitación del personal para venta, tanto en modalidades presenciales como digitales. Coadyuvando en la implementación de un sistema de asignación de clientes basado en limitaciones zonales, garantizando una distribución eficiente.",
+  },
+  {
+    date: "Octubre 2019 - Diciembre 2019",
+    title: "Administrador",
+    company: "LA CASA DEL ANTICUCHO",
+    description:
+      "Responsable de la gestión de sucursal garantizando una experiencia de atención al cliente excepcional en el establecimiento, recepción y procesamiento de pedidos, así como su eficiente despacho coordinado con el servicio de entrega al cliente.",
+    link:"https://www.facebook.com/lacasadelanticucho",
+  },
+  {
+    date: "Agosto 2014 - Marzo 2019",
+    title: "Encargado de tienda / Ejecutivo de ventas",
+    company: "IMPULSE",
+    description:
+      "Responsable de supervisión y gestión de las operaciones diarias de la tienda. Mi ámbito de responsabilidad abarcó aspectos críticos, tales como la dirección de las ventas, atención al cliente, gestión de inventario, así como la organización y el reabastecimiento eficiente de la mercancia para garantizar una experiencia de compra óptima.",
+    link:"https://www.impulse.bo/",
+  },
+]
+---
+
+<ol class="relative mt-16">
+  {
+    EXPERIENCIE.map((experiencie) => (
+      <li class="">
+        <ExperienceItem {...experiencie} />
+      </li>
+    ))
+  }
+</ol>

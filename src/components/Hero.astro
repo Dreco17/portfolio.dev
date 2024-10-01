@@ -1,0 +1,67 @@
+---
+const personalImageAlt = "Andres Balderrama"
+import Badge from "@/components/Badge.astro"
+import CvIcon from "@/components/icons/CvIcon.astro"
+import FacebookIcon from "@/components/icons/Facebook.astro"
+import LinkedInIcon from "@/components/icons/LinkedIn.astro"
+import MailIcon from "@/components/icons/Mail.astro"
+import SocialPill from "@/components/SocialPill.astro"
+import TiktokIcon from "@/components/icons/TiktokIcon.astro"
+import WhatsappIcon from "@/components/icons/WhatsappIcon.astro"
+---
+
+<div class="max-w-[600px]">
+  <div class="flex gap-4 mb-4">
+    <img
+      class="rounded-full object-contain shadow-lg size-14 w-32 h-32"
+      src="/andres.webp"
+      alt={personalImageAlt}
+    />
+    <a
+      href="https://www.linkedin.com/in/andres-marcelo-balderrama-morales-96ab34209/"
+      target="_blank"
+      rel="noopener"
+      class="flex items-center transition md:justify-center md:hover:scale-105"
+    >
+      <Badge>Disponible para trabajar</Badge>
+    </a>
+  </div>
+  <h1
+    class="text-4xl font-bold tracking-tight  dark:[&>strong]:text-yellow-200  [&>strong]:text-yellow-400 text-gray-800 sm:text-3xl dark:text-white"
+  >
+    Bienvenido, <strong>soy Andrés</strong> y este espacio es un reflejo de mi trayectoria profesional.
+  </h1>
+  <p
+    class="mt-6 text-xl text-gray-800 dark:[&>strong]:text-yellow-200 [&>strong]:text-yellow-400 [&>strong]:font-semibold dark:text-gray-300"
+  >
+     <strong
+      >Ingeniero Comercial</strong
+    > de Cochabamba, Bolivia 🇧🇴. Con experiencia sólida en Marketing Digital y Administración.
+  </p>
+  <nav class="flex flex-wrap gap-2 mt-8">
+    <SocialPill href="mailto:andres.balmo17@gmail.com">
+      <MailIcon class="size-4" />
+      Contáctame
+    </SocialPill>
+    <SocialPill target="_blank" href="/CvAndresBalderrama.pdf">
+      <CvIcon class="siza-4" />
+      Descargar CV
+    </SocialPill>
+    <SocialPill href="https://www.linkedin.com/in/andres-marcelo-balderrama-morales-96ab34209/">
+      <LinkedInIcon class="size-4" />
+      LinkedIn
+    </SocialPill>
+    <SocialPill href="https://www.facebook.com/andres.balderrama.965">
+      <FacebookIcon class="size-4" />
+      Facebook
+    </SocialPill>
+    <!-- <SocialPill href="https://www.tiktok.com/@andrecobamo7?_t=8kDWdJMTxws&_r=1">
+      <TiktokIcon class="size-4" />
+      TikTok
+    </SocialPill> -->
+    <!-- <SocialPill href="">
+      <WhatsappIcon class="size-4" />
+      WhatsApp
+    </SocialPill> -->
+  </nav>
+</div>

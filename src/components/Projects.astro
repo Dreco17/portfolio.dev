@@ -1,0 +1,83 @@
+---
+import GitHub from "./icons/GitHub.astro"
+import NextJS from "./icons/NextJS.astro"
+import Tailwind from "./icons/Tailwind.astro"
+import Link from "./icons/Link.astro"
+import LinkButton from "./LinkButton.astro"
+
+const PROJECTS = [
+  {
+    title: "Informática Avanzada",
+    subtitle: "Microsoft Excel - Microsoft Word",
+    description:
+      "Demostrando habilidades avanzadas en Word y Excel, optimizando la creación de documentos y análisis de datos.",
+    image: "/projects/microsoft.png",
+
+  },
+  {
+    title: "Diseño Gráfico",
+    subtitle: "Adobe Photoshop e Ilustrator 2020",
+    description:
+      "Conocimiento sólido de herramientas de edición, aplicando creatividad y precisión en el diseño gráfico.",
+    image: "/projects/adobe.png",
+    
+  },
+  {
+    title: "Programación",
+    subtitle: "Javascript - CSS - HTML5",
+    description:
+      "A un nivel intermedio con habilidades para desarrollar interactividad en páginas web, con la creación de diseños responsivos y estructuras sólidas.",
+    image: "/projects/programacion.png",
+    
+  },
+  {
+    title: "Marketing Digital Avanzado",
+    subtitle: "Platzi",
+    description:
+      "Estrategia y creación de contenido digital. Comunicación y marketing creativo para marcas. Marketing deportivo. Gestión efectiva del tiempo. Storytelling. ",
+    image: "/projects/platzi.png",
+    
+  },
+  {
+    title: "Idiomas",
+    subtitle: "Inglés - Castellano",
+    description:
+      "Siendo castellano mi idioma nativo. Ingles a un nivel B2, lo que me permite comunicarme y comprender eficazmente tanto en situaciones habladas como escritas.",
+    image: "/projects/idiomas.png",
+    
+  },
+]
+---
+
+<div class="flex flex-col gap-y-16">
+  {
+    PROJECTS.map(({ image, title, subtitle, description, }) => (
+    <article class="flex flex-col space-x-0 space-y-8 group md:flex-row md:space-x-8 md:space-y-0">
+  <div class="w-full md:w-1/2">
+    <div class="relative flex flex-col items-center col-span-6 row-span-5 gap-8 transition duration-500 ease-in-out transform shadow-xl overflow-clip rounded-xl sm:rounded-xl md:group-hover:-translate-y-1 md:group-hover:shadow-2xl lg:border lg:border-gray-800 lg:hover:border-gray-700 lg:hover:bg-gray-800/50">
+      <img alt="Competencias" class="object-cover object-top w-full h-56 transition duration-500 sm:h-full md:scale-110 md:group-hover:scale-105" loading="lazy" src={image} />
+    </div>
+  </div>
+
+  <div class="w-full md:w-1/2 md:max-w-lg">
+    <h3 class="text-2xl font-bold text-yellow-400">
+      {title}
+    </h3>
+    <h4 class="text-1xl font-bold text-gray-800 dark:text-gray-100">
+      {subtitle}
+    </h4>
+    <div class="flex flex-wrap mt-2">
+      <ul class="flex flex-row mb-2 gap-x-2">
+        </ul>
+      <div class="mt-2 text-gray-700 dark:text-gray-400">{description}</div>
+      <footer class="flex items-end justify-start mt-4 gap-x-4">
+      </footer>
+    </div>
+  </div>
+</article>
+    ))
+  }
+</div>
+
+
+
